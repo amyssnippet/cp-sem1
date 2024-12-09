@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="body">Experiment 1</h1>
+    <h4>1A Write an algorithm ,draw flowchart & a program: To add any 2
+        numbers using I/O data operators- printf(), scanf()</h4>
+    <p>
+        int main()<br>
+        {<br>
+        int num1, num2, sum;<br>
+        printf("Enter first number: ");<br>
+        scanf("%d", &num1);<br>
+        printf("Enter second number: ");<br>
+        scanf("%d", &num2);<br>
+        sum = num1 + num2;<br>
+        printf("Sum of the entered numbers: %d", sum);<br>
+        return 0;<br>
+        } <br>
+    </p>
+    <h4>1B C program to implement getchar() function to read a single character
+        & putchar() function to print the character entered by the user:
+    </h4>
+    <p>
+        int main()<br>
+        {<br>
+        int character;<br>
+        printf("Enter any random character between a-z: ");<br>
+        character = getchar();<br>
+        printf("The entered character is : ");<br>
+        putchar(character);<br>
+        return 0;<br>
+        }<br>
+    </p>
+    <h4>1C C program to implement Working of arithmetic operators
+    </h4>
+    <p>
+        int main()<br>
+        {<br>
+        int a = 9,b = 4, c;<br>
+        c = a+b;<br>
+        printf("a+b = %d \n",c);<br>
+        c = a-b;<br>
+        printf("a-b = %d \n",c);<br>
+        c = a*b;<br>
+        printf("a*b = %d \n",c);<br>
+        c = a/b;<br>
+        printf("a/b = %d \n",c);<br>
+        c = a%b;<br>
+        printf("Remainder when a divided by b = %d \n",c);<br>
+        return 0;<br>
+        }<br>
+    </p>
+    <h1>EXP 2</h1>
+    <h4>2A Write a program to demonstrate if-else statement in C</h4>
+    <p>
+        int main()<br>
+        {<br>
+        int x = 10;<br>
+        if (x < 5)<br>
+            {<br>
+            printf("x is less than 5\n");<br>
+            } else {<br>
+            printf("x is greater than or equal to 5\n");<br>
+            }<br>
+            return 0;<br>
+            }<br>
+    </p>
+    <h4>2B C program to implement a simple example to print numbers from 1 to
+        5 using do-while loop
+    </h4>
+    <p>
+        int main()<br>
+        {<br>
+        int i = 1;<br>
+        do<br>
+        {<br>
+        printf("%d\n", i);<br>
+        i++;<br>
+        }<br>
+        while (i<= 5);<br>
+            return 0;<br>
+            }<br>
+    </p>
+    <h1>EXP 3</h1>
+    <h4> Write a C program for Switch statement to perform all arithmetic
+    </h4>
+    <P>#include[stdio.h]<br>
+        #include[conio.h]<br>
+        int main()<br>
+        {<br>
+        int a,b;<br>
+        int op;<br>
+        printf(" 1.Addition\n 2.Subtraction\n 3.Multiplication\n 4.Division\n");<br>
+        printf("Enter the values of a & b: ");<br>
+        scanf("%d %d",&a,&b);<br>
+        printf("Enter your Choice : ");<br>
+        scanf("%d",&op);<br>
+        switch(op)<br>
+        {<br>
+        case 1 :<br>
+        printf("Sum of %d and %d is : %d",a,b,a+b);<br>
+        break;<br>
+        case 2 :<br>
+        printf("Difference of %d and %d is : %d",a,b,a-b);<br>
+        break;<br>
+        case 3 :<br>
+        printf("Multiplication of %d and %d is : %d",a,b,a*b);<br>
+        break;<br>
+        case 4 :<br>
+        printf("Division of Two Numbers is %d : ",a/b);<br>
+        break;<br>
+        default :<br>
+        printf(" Enter Your Correct Choice.");<br>
+        break;<br>
+        }<br>
+        return 0;<br>
+        }<br>
+    </P>
+    <h1>EXP 4</h1>
+    <h4>4A CALL BY VALUE</h4>
+    <p>
+        int add(int x, int y){<br>
+        int z = x + y;<br>
+        return z;<br>
+        }<br>
+        int main(){<br>
+        int a = 10, b = 20;<br>
+        int c = add(a, b);<br>
+        printf("Addition: %d", c);<br>
+        }<br>
+    </p>
+    <h4>4B CALL BY REFERENCE</h4>
+    <P>
+        void increment(int *var)<br>
+        {<br>
+        *var = *var+1;<br>
+        }<br>
+        int main()<br>
+        {<br>
+        int num=20;<br>
+        increment(&num);<br>
+        printf("Value of num is: %d", num);<br>
+        return 0;<br>
+        }<br>
+    </P>
+    <h1>EXP 5</h1>
+    <h4>5A Write a program to implement an iterative function for the Fibonacci
+        series.</h4>
+    <p>int main()<br>
+        {<br>
+        int n1=0,n2=1,n3,i,number;<br>
+        printf("Enter the number of elements:");<br>
+        scanf("%d",&number);<br>
+        printf("\n%d %d",n1,n2);<br>
+        for(i=2;i < number;++i)<br>
+            {<br>
+            n3=n1+n2;<br>
+            printf(" %d",n3);<br>
+            n1=n2;<br>
+            n2=n3;<br>
+            }<br>
+            return 0;<br>
+            }<br>
+    </p>
+    <h4>5B Write a program to implement fibonacci series in c
+        using recursion.
+    </h4>
+    <p>
+        void printFibonacci(int n)<br>
+        {<br>
+        static int n1=0,n2=1,n3;<br>
+        if(n>0)<br>
+        {<br>
+        n3 = n1 + n2;<br>
+        n1 = n2;<br>
+        n2 = n3;<br>
+        printf("%d ",n3);<br>
+        printFibonacci(n-1);<br>
+        }<br>
+        }<br>
+        int main()<br>
+        {<br>
+        int n;<br>
+        printf("Enter the number of elements: ");<br>
+        scanf("%d",&n);<br>
+        printf("Fibonacci Series: ");<br>
+        printf("%d %d ",0,1);<br>
+        printFibonacci(n-2);<br>
+        return 0;<br>
+        }<br>
+    </p>
+    <h1>EXP 6</h1>
+    <h4>6A Write a program to demonstrate Array 1D</h4>
+    <p>
+        int main()<br>
+        {<br>
+        int arr[5] = { 1, 2, 4, 8, 16 };<br>
+        for (int i = 0; i < 5; i++) {<br>
+            printf("%d ", arr[i]);<br>
+            }<br>
+            printf("\n");<br>
+            arr[3] = 9721;<br>
+            for (int i = 0; i < 5; i++) {<br>
+                printf("%d ", arr[i]); }<br>
+                return 0;<br>
+                }<br>
+    </p>
+    <h4>6B Write a program to demonstrate Array 2D</h4>
+    <P>
+        int main(){<br>
+        int i=0,j=0;<br>
+        int arr[4][3]={{1,2,3},{2,3,4},{3,4,5},{4,5,6}};<br>
+        for(i=0;i < 4;i++){<br>
+            for(j=0;j < 3;j++){<br>
+                printf("arr[%d] [%d] = %d \n",i,j,arr[i][j]);<br>
+                }<br>
+                }<br>
+                return 0;<br>
+                }<br>
+    </P>
+    <h1>EXP 7</h1>
+    <h4>7A write a program to demonstrate a string</h4>
+    <p>
+        #include < stdio.h><br>
+            #include < string.h><br>
+                int main()<br>
+                {<br>
+                char str[] = "Hello World";<br>
+                printf("The length of the string is: %d\n", strlen(str));<br>
+                char dest[];<br>
+                strcpy(dest, str);<br>
+                printf("The copied string is: %s\n", dest);<br>
+                char str1[] = "Hi.";<br>
+                char str2[] = "How are you?";<br>
+                strcat(str1, str2);<br>
+                printf("The concatenated string is: %s\n", str1);<br>
+                int result = strcmp(str1, str2);<br>
+                if(result == 0)<br>
+                {<br>
+                printf("The strings are equal.\n");<br>
+                }<br>
+                else if(result < 0)<br>
+                    {<br>
+                    printf("The first string is less than the second string.\n");<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    printf("The first string is greater than the second string.\n");<br>
+                    }<br>
+                    return 0;<br>
+                    }<br>
+    </p>
+    <h4>7B Program to demonstrate String arrays of string</h4>
+    <p>
+        #include < stdio.h><br>
+            int main()<br>
+            {<br>
+            int i;<br>
+            char Array[3][10] = {"Black", "Blame", "Block"};<br>
+            printf("String Array: \n");<br>
+            for(i = 0; i < 3; i++)<br>
+                {<br>
+                printf("%s\n", Array[i]);<br>
+                }<br>
+                return 0;<br>
+                }<br>
+    </p>
+    <h1>EXP 8</h1>
+    <h4>Write a C program that defines a structure called student , store the
+        student's name,roll no,address,date of birth and print it</h4>
+    <p>
+        #include < stdio.h><br>
+            #include < string.h><br>
+                struct student {<br>
+                char name[100];<br>
+                int roll_no;<br>
+                char address[200];<br>
+                char dob[20];<br>
+                };<br>
+                int main() {<br>
+                struct student stu;<br>
+                printf("Enter student's name: ");<br>
+                fgets(stu.name, sizeof(stu.name), stdin);<br>
+                stu.name[strcspn(stu.name, "\n")] = '\0';<br>
+                printf("Enter student's roll number: ");<br>
+                scanf("%d", &stu.roll_no);<br>
+                getchar();<br>
+                printf("Enter student's address: ");<br>
+                fgets(stu.address, sizeof(stu.address), stdin);<br>
+                stu.address[strcspn(stu.address, "\n")] = '\0';<br>
+                printf("Enter student's date of birth (DD/MM/YYYY): ");<br>
+                fgets(stu.dob, sizeof(stu.dob), stdin);<br>
+                stu.dob[strcspn(stu.dob, "\n")] = '\0';<br>
+                printf("\nStudent Information:\n");<br>
+                printf("Name: %s\n", stu.name);<br>
+                printf("Roll No: %d\n", stu.roll_no);<br>
+                printf("Address: %s\n", stu.address);<br>
+                printf("Date of Birth: %s\n", stu.dob);<br>
+                return 0;<br>
+                }<br>
+    </p>
+    <h1>EXP 9</h1>
+    <h4>Program to demonstrate pointers</h4>
+    <p>
+        #include < stdio.h><br>
+            int main()<br>
+            {<br>
+            int num = 5;<br>
+            int *ptr = & num;<br>
+            printf("Value of num: %d\n", num);<br>
+            printf("Address of num: %p\n", &num);<br>
+            printf("Pointer ptr pointing to address: %p\n", ptr);<br>
+            printf("Value at the address pointed by ptr: %d\n", *ptr);<br>
+            return 0;<br>
+            }<br>
+    </p>
+    <h1>EXP 10</h1>
+    <h4>C Program to create a file</h4>
+    <P>
+        #include < stdio.h><br>
+            #include < stdlib.h><br>
+                int main()<br>
+                {<br>
+                FILE* fptr;<br>
+                fptr = fopen("file.txt", "w");<br>
+                if (fptr == NULL) {<br>
+                printf("The file is not opened. The program will "<br>
+                "exit now");<br>
+                exit(0);<br>
+                }<br>
+                else {<br>
+                printf("The file is created Successfully.");<br>
+                }<br>
+                return 0;<br>
+                }<br>
+    </P>
+</body>
+</hmtl>
